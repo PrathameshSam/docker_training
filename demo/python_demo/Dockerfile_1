@@ -1,0 +1,10 @@
+FROM ubuntu
+MAINTAINER Sam
+RUN apt-get update
+RUN apt-get install -y python
+ADD script.py /home/script.py
+ADD fibonacii.py /home/fibonacii.py
+CMD ["/home/script.py"]
+ENTRYPOINT ["python"]
+
+
